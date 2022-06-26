@@ -153,7 +153,7 @@ namespace Final5._21
                 return age;
             }
             //метод вывода на экран кортежа
-            static void OutPrint(string Name, string Surname, uint Age, bool Pets, string[] Nickname, string[] favcolors)
+            static void OutPrint(string Name, string Surname, uint Age, bool HasPets, string[] Nickname, string[] favcolors)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine();
@@ -161,8 +161,11 @@ namespace Final5._21
                 Console.Write($"\tВас зовут {Name}\n");
                 Console.Write($"\tВаша фамилия {Surname}\n");
                 Console.Write($"\tВаш возраст {Age}\n");
-                Console.Write($"\tНаличие животных {Pets}\n");
-                if (Pets == true)
+                if (HasPets == true)
+                {
+                    Console.Write($"\tКлички животных\n");
+                }
+                if (HasPets == true)
                 {
                     for (int i = 0; i < Nickname.Length; i++)
                     {
